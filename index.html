@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDoApp</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo App</h1>
+        <input placeholder="Enter Task" type="text" id="task" oninput="enablebtn()">
+        <br>
+        <button class="btn" id="addBtn" onclick="addTask()" disabled>Add Task</button>
+        <button class="btn" id="deleteBtn" onclick="deleteAll()" disabled>Delete All</button>
+    </div>
+
+    <div class="list">
+        <ul id="taskList">
+
+        </ul>
+    </div>
+
+    <div id="overlay">
+        <div id="text">
+            <form action="javascript:void(0)" onsubmit="update()">
+                <input  placeholder="Enter Task" type="text" name="updateTask" id="updateTask">
+                <input class="btn" type="submit" value="Update">
+                <button class="btn" onclick="cancel()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
